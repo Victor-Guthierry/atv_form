@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lista | Batismo</title>
+</head>
+<body>
+	<h1>Lista de Batismos</h1>
+	<div th:each="cat : ${batismos}">
+		<span th:text="${cat.codigo}"></span> - 
+		<span th:text="${cat.nomeCrianca}"></span> - Nascimento: 
+		<span th:text="${cat.dataNascimento}"></span> -  Pai: 
+		<span th:text="${cat.nomePai}"></span> -  Mãe: 
+		<span th:text="${cat.nomeMae}"></span> -  Batismo: 
+		<span th:text="${cat.dataBatismo}"></span> 
+	</div>
+	
+</body>
+</html>

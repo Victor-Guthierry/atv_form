@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <title>Ficha de inscrição batismo</title>
+    <style>
+        body{
+            background: rgb(231,206,246);
+            background: radial-gradient(circle, rgba(231,206,246,1) 22%, rgba(255,243,246,1) 90%);
+        }
+        .container{
+            background: antiquewhite;
+        }
+        .link{
+        	text-decoration: none;
+        }
+        input, select{
+            box-shadow: 0 1px 0 0;
+            border: 0 none;
+            outline: 0;
+            margin: 10px 0 ;
+            width: 100%;
+            background: antiquewhite;
+            text-overflow: clip;
+        }
+        #UF{
+            text-overflow: ellipsis;
+            width: 5rem;
+        }
+        #labelUF{
+            width: auto;
+            text-overflow: ellipsis
+        }
+        input[type=number]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+
+        }
+        input::-webkit-calendar-picker-indicator{
+            display: none;
+        }
+        h2,h5{
+            padding: 5px;
+            text-align: center;
+            text-decoration: underline;
+        }
+        label{
+            padding: 0;
+            margin: 0;
+        }
+        p{
+            margin: 0;
+        }
+        input[type=radio], input[type=checkbox]{
+            display:none; /* Esconde os inputs */}
+        input[type=radio] + label, input[type=checkbox] + label{
+            display:inline-block;    height:20px;    padding:0 0 0 25px;    margin:0 10px 0 0;    background-image:url(http://www.webcis.com.br/images/imagens-noticias/checkbox/ico-master.webp);    background-repeat:no-repeat;    background-position:0 0;}
+        input[type=radio] + label{
+            background-position:0 -60px; /* Muda a posição do background só no checkbox */}
+        input[type=checkbox] + label{
+            background-position:0 -60px; /* Muda a posição do background só no checkbox */}
+        input[type=radio]:checked + label{
+            background-position:0 -90px;}
+        input[type=checkbox]:checked + label {
+            background-position:0 -90px;}
+
+
+    </style>
+</head>
+<body>
+
+<div class="container p-5 input-group mb-3" style="border-style: solid; margin: 50px auto; width: 900px;">
+    <div class="row">
+        <img src="data:image/jpeg;base64,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"
+             class="col-2">
+        <div class="col-9" style="text-align: center; margin: auto;">
+            <h3 class="text-uppercase">Paróquia menino jesus de praga</h3>
+            <p >Av. do corretor, 27 - vila aliança</p>
+            <p>Bangu - Rio de janeiro</p>
+            <p>Tel: (21) 2401-9853</p>
+        </div>
+
+    </div>
+
+    <form action="/batismo" method="post">
+        <h2>Ficha de inscrição para o batismo</h2>
+        <p style="font-size: small;" >(Preencha conforme os documentos e leve esta ficha no dia da inscrição)</p>
+        <div class="row">
+            <label for="nomeCrianca" class="col-3"> <b> Nome da Criança:</b></label>
+            <input type="text" name="nomeCrianca" id="nomeCrianca" class="col">
+        </div>
+        <div class="row">
+            <label for="dataNacimento" class="col-3 ">Data de Nacimento:</label>
+            <input type="date" name="dataNacimento" id="dataNacimento" class="col-2">
+            <label for="cidade" class="col-1"> Cidade: </label>
+            <input type="text" name="cidade" id="cidade" class="col-4">
+            <label for="UF" class="col-1" id="labelUF">UF:</label>
+            <select class="col-1" id="UF">
+                <option value=""></option>
+                <option value="AC">Acre</option>
+                <option value="AL">Alagoas</option>
+                <option value="AP">Amapá</option>
+                <option value="AM">Amazonas</option>
+                <option value="BA">Bahia</option>
+                <option value="CE">Ceará</option>
+                <option value="DF">Distrito Federal</option>
+                <option value="ES">Espirito Santo</option>
+                <option value="GO">Goiás</option>
+                <option value="MA">Maranhão</option>
+                <option value="MS">Mato Grosso do Sul</option>
+                <option value="MT">Mato Grosso</option>
+                <option value="MG">Minas Gerais</option>
+                <option value="PA">Pará</option>
+                <option value="PB">Paraíba</option>
+                <option value="PR">Paraná</option>
+                <option value="PE">Pernambuco</option>
+                <option value="PI">Piauí</option>
+                <option value="RJ">Rio de Janeiro</option>
+                <option value="RN">Rio Grande do Norte</option>
+                <option value="RS">Rio Grande do Sul</option>
+                <option value="RO">Rondônia</option>
+                <option value="RR">Roraima</option>
+                <option value="SC">Santa Catarina</option>
+                <option value="SP">São Paulo</option>
+                <option value="SE">Sergipe</option>
+                <option value="TO">Tocantins</option>
+            </select>
+        </div>
+        <div class="row">
+            <label for="nomePai" class="col-1"><b>Pai:</b></label>
+            <input type="text" name="nomePai" id="nomePai" class="col">
+        </div>
+        <div class="row">
+            <label for="naturalidadePai" class="col-1">Natural:</label>
+            <input type="text" name="naturalidadePai" id="naturalidadePai" class="col">
+        </div>
+        <div class="row" >
+            <label for="nomeMae" class="col-1"> <b> Mae:</b></label>
+            <input type="text" name="nomeMae" id="nomeMae" class="col">
+        </div>
+        <div class="row">
+            <label for="naturalidadeMae" class="col-1">Natural:</label>
+            <input type="text" name="naturalidadeMae" id="naturalidadeMae" class="col">
+        </div>
+        <div class="row">
+            <label for="endereco" class="col-2">Endereço:</label>
+            <input type="text" name="endereco" id="endereco" class="col">
+        </div>
+        <div class="row">
+            <label for="telefone" class="col-1">Tel:</label>
+            <input type="number" name="telefone" id="telefone" class="col-4">
+            <label for="celular" class="col-1">Cel:</label>
+            <input type="number" name="celular" id="celular" class="col">
+        </div>
+        <div class="row">
+            <label for="nomeParoquia" class="col-5">Nome da Paróquia que os pais frequentam:</label>
+            <input type="text" name="nomeParoquia" id="nomeParoquia" class="col">
+        </div>
+        <div class="row">
+            <p class="col-2">São casados?</p>
+            <div class="col-1">
+                <input type="radio" name="paisCasados" id="paissaoCasados" value="true">
+                <label for="paissaoCasados" >sim</label>
+            </div>
+            <div class="col-2">
+                <input type="radio" name="paisCasados" id="paisnaoCasados" value="false" >
+                <label for="paisnaoCasados" >não</label>
+            </div>
+
+
+            <p class="col-3">Na Igreja Católica?</p>
+            <div class="col-1">
+                <input type="radio" name="casadosIgreja" id="casadosnaIgreja" value="true" >
+                <label for="casadosnaIgreja" >sim</label>
+            </div>
+            <div class="col-1">
+                <input type="radio" name="casadosIgreja" id="casadosnaoIgreja" value="false" >
+                <label for="casadosnaoIgreja" >não</label>
+            </div>
+        </div>
+        <!-- Padrinho -->
+        <div class="row">
+            <label for="nomePadrinho" class="col-2"><b>Padrinho:</b></label>
+            <input type="text" name="nomePadrinho" id="nomePadrinho" class="col">
+        </div>
+        <div class="row">
+            <label for="telefonePadrinho" class="col-1">Tel:</label>
+            <input type="number" name="telefonePadrinho" id="telefonePadrinho" class="col-4">
+            <label for="celularPadrinho" class="col-1">Cel:</label>
+            <input type="number" name="celularPadrinho" id="celularPadrinho" class="col">
+        </div>
+        <div class="row">
+            <p class="col-2">É Católico?</p>
+            <div class="col-1">
+                <input type="radio" name="padrinhoCatolico" id="padrinhoeCatolico" value="true">
+                <label for="padrinhoeCatolico">sim</label>
+            </div>
+            <div class="col-2">
+                <input type="radio" name="padrinhoCatolico" id="padrinhonaoeCatolico" value="false">
+                <label for="padrinhonaoeCatolico">não</label>
+            </div>
+
+            <p class="col-3">Fez 1ª Eucarestia?</p>
+            <div class="col-1">
+                <input type="radio" name="eucarestiaPadrinho" id="fezeucarestiaPadrinho" value="true">
+                <label for="fezeucarestiaPadrinho">sim</label>
+            </div>
+            <div class="col-1">
+                <input type="radio" name="eucarestiaPadrinho" id="naofezeucarestiaPadrinho" value="false">
+                <label for="naofezeucarestiaPadrinho">não</label>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-2">É crismado?</p>
+            <div class="col-1">
+                <input type="radio" name="crismaPadrinho" id="fezcrismaPadrinho" value="true">
+                <label for="fezcrismaPadrinho">sim</label>
+            </div>
+            <div class="col-2">
+                <input type="radio" name="crismaPadrinho" id="naofezcrismaPadrinho" value="false">
+                <label for="naofezcrismaPadrinho">não</label>
+            </div>
+            <p class="col-2">É casado?</p>
+            <div class="col-1">
+                <input type="radio" name="padrinhoCasado" id="padrinhoeCasado" value="true">
+                <label for="padrinhoeCasado">sim</label>
+            </div>
+            <div class="col-1">
+                <input type="radio" name="padrinhoCasado" id="padrinhonaoeCasado" value="false">
+                <label for="padrinhonaoeCasado">não</label>
+            </div>
+
+        </div>
+        <div class="row">
+            <p class="col-3">Na Igreja Católica?</p>
+            <div class="col-1">
+                <input type="radio" name="PadrinhoCasadosIgreja" id="PadrinhoCasadoIgreja" value="true">
+                <label for="PadrinhoCasadoIgreja">sim</label>
+            </div>
+            <div class="col-1">
+                <input type="radio" name="PadrinhoCasadosIgreja" id="PadrinhoCasadonaoIgreja" value="false">
+                <label for="PadrinhoCasadonaoIgreja">não</label>
+            </div>
+            <label for="padrinhoNomeIgreja" class="col-2">Qual Igreja?</label>
+            <input type="text" name="padrinhoNomeIgreja" id="padrinhoNomeIgreja" class="col">
+
+        </div>
+        <div class="row">
+            <label for="padrinhoNomeConjulgue" class="col-3">Nome da esposa:</label>
+            <input type="text" name="padrinhoNomeConjulgue" id="padrinhoNomeConjulgue" class="col">
+        </div>
+        <!-- madrinha -->
+        <div class="row">
+            <label for="nomeMadrinha" class="col-2"><b>Madrinha:</b></label>
+            <input type="text" name="nomeMadrinha" id="nomeMadrinha" class="col">
+        </div>
+        <div class="row">
+            <label for="telefoneMadrinha" class="col-1">Tel:</label>
+            <input type="number" name="telefoneMadrinha" id="telefoneMadrinha" class="col-4">
+            <label for="celularMadrinha" class="col-1">Cel:</label>
+            <input type="number" name="celularMadrinha" id="celularMadrinha" class="col">
+        </div>
+        <div class="row">
+            <p class="col-2">É Catolica?</p>
+            <div class="col-1">
+                <input type="radio" name="madrinhaCatolica" id="madrinhaeCatolica" value="true">
+                <label for="madrinhaeCatolica">sim</label>
+            </div>
+            <div class="col-2">
+                <input type="radio" name="madrinhaCatolica" id="madrinhanaoeCatolica" value="false">
+                <label for="madrinhanaoeCatolica">não</label>
+            </div>
+            <p class="col-3">Fez 1ª eucarestia?</p>
+            <div class="col-1">
+                <input type="radio" name="eucarestiaMadrinha" id="fezeucarestiaMadrinha" value="true">
+                <label for="fezeucarestiaMadrinha">sim</label>
+            </div>
+            <div class="col-1">
+                <input type="radio" name="eucarestiaMadrinha" id="naofezeucarestiaMadrinha" value="false">
+                <label for="naofezeucarestiaMadrinha">não</label>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-2">É crismada?</p>
+            <div class="col-1">
+                <input type="radio" name="crismaMadrinha" id="fezcrismaMadrinha" value="true">
+                <label for="fezcrismaMadrinha">sim</label>
+            </div>
+            <div class="col-2">
+                <input type="radio" name="crismaMadrinha" id="naofezcrismaMadrinha" value="false">
+                <label for="naofezcrismaMadrinha">não</label>
+            </div>
+            <p class="col-2">É casada?</p>
+            <div class="col-1">
+                <input type="radio" name="madrinhaCasada" id="madrinhaeCasada" value="true">
+                <label for="madrinhaeCasada">sim</label>
+            </div>
+            <div class="col-1">
+                <input type="radio" name="madrinhaCasada" id="madrinhanaoeCasada" value="false">
+                <label for="madrinhanaoeCasada">não</label>
+            </div>
+        </div>
+        <div class="row">
+            <p class="col-3">Na Igreja Católica?</p>
+            <div class="col-1">
+                <input type="radio" name="madrinhaCasadosIgreja" id="madrinhaCasadaIgreja" value="true">
+                <label for="madrinhaCasadaIgreja">sim</label>
+            </div>
+            <div class="col-1">
+                <input type="radio" name="madrinhaCasadosIgreja" id="madrinhaCasadanaoIgreja" value="false">
+                <label for="madrinhaCasadanaoIgreja">não</label>
+            </div>
+            <label for="madrinhaNomeIgreja" class="col-2">Qual Igreja?</label>
+            <input type="text" name="madrinhaNomeIgreja" id="madrinhaNomeIgreja" class="col">
+        </div>
+        <div class="row">
+            <label for="madrinhaNomeConjulgue" class="col-3">Nome do esposo:</label>
+            <input type="text" name="madrinhaNomeConjulgue" id="madrinhaNomeConjulgue" class="col">
+        </div>
+        <!-- opcional  -->
+        <div style="border-style: dashed; padding: 10px;" >
+            <div class="row">
+                <p style="font-size: x-small;">(Esta parte será preencida pela equipe de Batismo)</p>
+                <p class="col-4">Quem compareceu a palestra:</p>
+                <div class="col-1">
+                    <input type="checkbox" id="pai" name="compareceuPalestra" value="pai">
+                    <label for="pai">Pai</label>
+                </div>
+                <div class="col-2">
+                    <input type="checkbox" id="mae" name="compareceuPalestra" value="mae">
+                    <label for="mae">Mãe</label>
+                </div>
+                <div class="col-2">
+                    <input type="checkbox" id="padrinho" name="compareceuPalestra" value="padrinho">
+                    <label for="padrinho">Padrinho</label>
+                </div>
+                <div class="col-2">
+                    <input type="checkbox" id="madrinha" name="compareceuPalestra" value="madrinha">
+                    <label for="madrinha">Madrinha</label>
+                </div>
+            </div>
+            <div class="row">
+                <label for="dataBatismo" class="col-3">Data do Batismo:</label>
+                <input type="date" name="dataBatismo" id="dataBatismo" class="col-2">
+                <label for="celebrante" class="col-2">celebrante:</label>
+                <input type="text" name="celebrante" id="celebrante" class="col-4">
+            </div>
+            <div class="row">
+                <label for="pastoral" class="col-3">Agente pastoral:</label>
+                <input type="text" name="pastoral" id="pastoral" class="col-8">
+            </div>
+        </div>
+        <h5 class="text-uppercase">o preenchimento deste documento não representa reserva da inscrição</h5>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+            <button type="submit" class="btn btn-primary">Cadastar</button>
+        </div>
+    </form>
+    <a href="/listaBatismos" class="btn btn-primary link"> Listar Batismos </a>
+</div>
+
+</body>
+</html>
