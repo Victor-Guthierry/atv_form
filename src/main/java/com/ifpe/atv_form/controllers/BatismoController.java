@@ -1,5 +1,6 @@
 package com.ifpe.atv_form.controllers;
 import com.ifpe.atv_form.models.*;
+import com.ifpe.atv_form.service.BatismoService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,6 +20,9 @@ public class BatismoController {
 	@Autowired
 	private BatismoDAO batismoDAO;
 	
+	@Autowired
+	private BatismoService batismoService;
+	
 	@ModelAttribute("batismos")
 	public List<BatismoModel> getLista(){
 		return this.batismoDAO.findAll();
@@ -33,7 +37,8 @@ public class BatismoController {
     public String providerToString(BatismoModel batismoModel){
     	this.lista.add(batismoModel);
         System.out.println(batismoModel.toString());
-        this.batismoDAO.save(batismoModel);
+  //      this.batismoDAO.save(batismoModel);
+        this.batismoService.cadastrarBatismo(batismoModel);
         return "batismo";
     }
     
