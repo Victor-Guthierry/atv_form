@@ -116,29 +116,19 @@
 				<input type="text" name="nomeParoquia" id="nomeParoquia" class="col" required>
 			</div>
 			<div class="row">
-				<p class="col-2">São casados?</p>
-				<div class="col-1">
-					<input type="radio" name="paisCasados" id="paissaoCasados" value="true" required>
-					<label for="paissaoCasados">sim</label>
+				<div class="col-4">
+					<input type="checkbox" name="paisCasados" id="paissaoCasados" value="true" required>
+					<label for="paissaoCasados">São casados?</label>
 				</div>
-				<div class="col-2">
-					<input type="radio" name="paisCasados" id="paisnaoCasados" value="false" required>
-					<label for="paisnaoCasados">não</label>
-				</div>
-
-
-				<p class="col-3">Na Igreja Católica?</p>
-				<div class="col-1">
-					<input type="radio" name="casadosIgreja" id="casadosnaIgreja" value="true" required>
-					<label for="casadosnaIgreja">sim</label>
-				</div>
-				<div class="col-1">
-					<input type="radio" name="casadosIgreja" id="casadosnaoIgreja" value="false" required>
-					<label for="casadosnaoIgreja">não</label>
+				<div class="col-4">
+					<input type="checkbox" name="casadosIgreja" id="casadosnaIgreja" value="true" required>
+					<label for="casadosnaIgreja">Na Igreja Católica?</label>
 				</div>
 			</div>
+			
+			
 			<!-- Padrinho -->
-			<div class="row">
+			<div class="row" style="margin-top: 20px;">
 				<label for="nomePadrinho" class="col-2"><b>Padrinho:</b></label>
 				<input type="text" name="nomePadrinho" id="nomePadrinho" class="col" required>
 			</div>
@@ -149,56 +139,27 @@
 				<input type="number" name="celularPadrinho" id="celularPadrinho" class="col" required>
 			</div>
 			<div class="row">
-				<p class="col-2">É Católico?</p>
-				<div class="col-1">
-					<input type="radio" name="padrinhoCatolico" id="padrinhoeCatolico" value="true" required>
-					<label for="padrinhoeCatolico">sim</label>
+				<div class="col-4">
+					<input type="checkbox" name="padrinhoCatolico" id="padrinhoeCatolico" value="true" required>
+					<label for="padrinhoeCatolico">É Católico?</label>
 				</div>
-				<div class="col-2">
-					<input type="radio" name="padrinhoCatolico" id="padrinhonaoeCatolico" value="false" required>
-					<label for="padrinhonaoeCatolico">não</label>
+				<div class="col-4">
+					<input type="checkbox" name="eucarestiaPadrinho" id="fezeucarestiaPadrinho" value="true" required>
+					<label for="fezeucarestiaPadrinho">Fez 1ª Eucarestia?</label>
 				</div>
-
-				<p class="col-3">Fez 1ª Eucarestia?</p>
-				<div class="col-1">
-					<input type="radio" name="eucarestiaPadrinho" id="fezeucarestiaPadrinho" value="true" required>
-					<label for="fezeucarestiaPadrinho">sim</label>
-				</div>
-				<div class="col-1">
-					<input type="radio" name="eucarestiaPadrinho" id="naofezeucarestiaPadrinho" value="false" required>
-					<label for="naofezeucarestiaPadrinho">não</label>
+				<div class="col-4">
+					<input type="checkbox" name="crismaPadrinho" id="fezcrismaPadrinho" value="true" required>
+					<label for="fezcrismaPadrinho">É crismado?</label>
 				</div>
 			</div>
 			<div class="row">
-				<p class="col-2">É crismado?</p>
-				<div class="col-1">
-					<input type="radio" name="crismaPadrinho" id="fezcrismaPadrinho" value="true" required>
-					<label for="fezcrismaPadrinho">sim</label>
-				</div>
 				<div class="col-2">
-					<input type="radio" name="crismaPadrinho" id="naofezcrismaPadrinho" value="false" required>
-					<label for="naofezcrismaPadrinho">não</label>
+					<input type="checkbox" name="padrinhoCasado" id="padrinhoeCasado" value="true" required>
+					<label for="padrinhoeCasado">É casado?</label>
 				</div>
-				<p class="col-2">É casado?</p>
-				<div class="col-1">
-					<input type="radio" name="padrinhoCasado" id="padrinhoeCasado" value="true" required>
-					<label for="padrinhoeCasado">sim</label>
-				</div>
-				<div class="col-1">
-					<input type="radio" name="padrinhoCasado" id="padrinhonaoeCasado" value="false" required>
-					<label for="padrinhonaoeCasado">não</label>
-				</div>
-
-			</div>
-			<div class="row">
-				<p class="col-3">Na Igreja Católica?</p>
-				<div class="col-1">
-					<input type="radio" name="PadrinhoCasadosIgreja" id="PadrinhoCasadoIgreja" value="true" required>
-					<label for="PadrinhoCasadoIgreja">sim</label>
-				</div>
-				<div class="col-1">
-					<input type="radio" name="PadrinhoCasadosIgreja" id="PadrinhoCasadonaoIgreja" value="false" required>
-					<label for="PadrinhoCasadonaoIgreja">não</label>
+				<div class="col-3">
+					<input type="checkbox" name="PadrinhoCasadosIgreja" id="PadrinhoCasadoIgreja" value="true" required>
+					<label for="PadrinhoCasadoIgreja">Na Igreja Católica?</label>
 				</div>
 				<label for="padrinhoNomeIgreja" class="col-2">Qual Igreja?</label>
 				<input type="text" name="padrinhoNomeIgreja" id="padrinhoNomeIgreja" class="col" required>
@@ -208,7 +169,9 @@
 				<label for="padrinhoNomeConjulgue" class="col-3">Nome da esposa:</label>
 				<input type="text" name="padrinhoNomeConjulgue" id="padrinhoNomeConjulgue" class="col" required>
 			</div>
-			<!-- madrinha -->
+			
+			
+			<!-- Madrinha -->
 			<div class="row">
 				<label for="nomeMadrinha" class="col-2"><b>Madrinha:</b></label>
 				<input type="text" name="nomeMadrinha" id="nomeMadrinha" class="col" required>
@@ -220,54 +183,27 @@
 				<input type="number" name="celularMadrinha" id="celularMadrinha" class="col" required>
 			</div>
 			<div class="row">
-				<p class="col-2">É Catolica?</p>
-				<div class="col-1">
-					<input type="radio" name="madrinhaCatolica" id="madrinhaeCatolica" value="true" required>
-					<label for="madrinhaeCatolica">sim</label>
+				<div class="col-4">
+					<input type="checkbox" name="madrinhaCatolica" id="madrinhaeCatolica" value="true" required>
+					<label for="madrinhaeCatolica">É Catolica?</label>
 				</div>
-				<div class="col-2">
-					<input type="radio" name="madrinhaCatolica" id="madrinhanaoeCatolica" value="false" required>
-					<label for="madrinhanaoeCatolica">não</label>
+				<div class="col-4">
+					<input type="checkbox" name="eucarestiaMadrinha" id="fezeucarestiaMadrinha" value="true" required>
+					<label for="fezeucarestiaMadrinha">Fez 1ª eucarestia?</label>
 				</div>
-				<p class="col-3">Fez 1ª eucarestia?</p>
-				<div class="col-1">
-					<input type="radio" name="eucarestiaMadrinha" id="fezeucarestiaMadrinha" value="true" required>
-					<label for="fezeucarestiaMadrinha">sim</label>
-				</div>
-				<div class="col-1">
-					<input type="radio" name="eucarestiaMadrinha" id="naofezeucarestiaMadrinha" value="false" required>
-					<label for="naofezeucarestiaMadrinha">não</label>
+				<div class="col-4">
+					<input type="checkbox" name="crismaMadrinha" id="fezcrismaMadrinha" value="true" required>
+					<label for="fezcrismaMadrinha">É crismada?</label>
 				</div>
 			</div>
 			<div class="row">
-				<p class="col-2">É crismada?</p>
-				<div class="col-1">
-					<input type="radio" name="crismaMadrinha" id="fezcrismaMadrinha" value="true" required>
-					<label for="fezcrismaMadrinha">sim</label>
-				</div>
 				<div class="col-2">
-					<input type="radio" name="crismaMadrinha" id="naofezcrismaMadrinha" value="false" required>
-					<label for="naofezcrismaMadrinha">não</label>
+					<input type="checkbox" name="madrinhaCasada" id="madrinhaeCasada" value="true" required>
+					<label for="madrinhaeCasada">É casada?</label>
 				</div>
-				<p class="col-2">É casada?</p>
-				<div class="col-1">
-					<input type="radio" name="madrinhaCasada" id="madrinhaeCasada" value="true" required>
-					<label for="madrinhaeCasada">sim</label>
-				</div>
-				<div class="col-1">
-					<input type="radio" name="madrinhaCasada" id="madrinhanaoeCasada" value="false" required>
-					<label for="madrinhanaoeCasada">não</label>
-				</div>
-			</div>
-			<div class="row">
-				<p class="col-3">Na Igreja Católica?</p>
-				<div class="col-1">
-					<input type="radio" name="madrinhaCasadosIgreja" id="madrinhaCasadaIgreja" value="true" required>
-					<label for="madrinhaCasadaIgreja">sim</label>
-				</div>
-				<div class="col-1">
-					<input type="radio" name="madrinhaCasadosIgreja" id="madrinhaCasadanaoIgreja" value="false" required>
-					<label for="madrinhaCasadanaoIgreja">não</label>
+				<div  class="col-3">
+					<input type="checkbox" name="madrinhaCasadosIgreja" id="madrinhaCasadaIgreja" value="true" required>
+					<label for="madrinhaCasadaIgreja">Na Igreja Católica?</label>
 				</div>
 				<label for="madrinhaNomeIgreja" class="col-2">Qual Igreja?</label>
 				<input type="text" name="madrinhaNomeIgreja" id="madrinhaNomeIgreja" class="col" required>
@@ -282,19 +218,19 @@
 					<p style="font-size: x-small;">(Esta parte será preencida pela equipe de Batismo)</p>
 					<p class="col-4">Quem compareceu a palestra:</p>
 					<div class="col-1">
-						<input type="checkbox" id="pai" name="compareceuPalestra" value="pai" required>
+						<input type="checkbox" id="pai" name="compareceuPalestra" value="pai">
 						<label for="pai">Pai</label>
 					</div>
 					<div class="col-2">
-						<input type="checkbox" id="mae" name="compareceuPalestra" value="mae" required>
+						<input type="checkbox" id="mae" name="compareceuPalestra" value="mae">
 						<label for="mae">Mãe</label>
 					</div>
 					<div class="col-2">
-						<input type="checkbox" id="padrinho" name="compareceuPalestra" value="padrinho" required>
+						<input type="checkbox" id="padrinho" name="compareceuPalestra" value="padrinho">
 						<label for="padrinho">Padrinho</label>
 					</div>
 					<div class="col-2">
-						<input type="checkbox" id="madrinha" name="compareceuPalestra" value="madrinha" required>
+						<input type="checkbox" id="madrinha" name="compareceuPalestra" value="madrinha">
 						<label for="madrinha">Madrinha</label>
 					</div>
 				</div>
