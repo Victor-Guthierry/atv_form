@@ -1,0 +1,60 @@
+body{
+    background: rgb(231,206,246);
+    background: radial-gradient(circle, rgba(231,206,246,1) 22%, rgba(255,243,246,1) 90%);
+}
+.container{
+    background: antiquewhite;
+}
+.link{
+	text-decoration: none;
+}
+input, select{
+    box-shadow: 0 1px 0 0;
+    border: 0 none;
+    outline: 0;
+    margin: 10px 0 ;
+    width: 100%;
+    background: antiquewhite;
+    text-overflow: clip;
+}
+#UF{
+    text-overflow: ellipsis;
+    width: 5rem;
+}
+#labelUF{
+    width: auto;
+    text-overflow: ellipsis
+}
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+
+}
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+h2,h5{
+    padding: 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+label{
+    padding: 0;
+    margin: 0;
+}
+p{
+    margin: 0;
+}
+input[type=radio], input[type=checkbox]{
+    display:none; /* Esconde os inputs */}
+input[type=radio] + label, input[type=checkbox] + label{
+    display:inline-block;    height:20px;    padding:0 0 0 25px;    margin:0 10px 0 0;    background-image:url(http://www.webcis.com.br/images/imagens-noticias/checkbox/ico-master.webp);    background-repeat:no-repeat;    background-position:0 0;}
+input[type=radio] + label{
+    background-position:0 -60px; /* Muda a posição do background só no checkbox */}
+input[type=checkbox] + label{
+    background-position:0 -60px; /* Muda a posição do background só no checkbox */}
+input[type=radio]:checked + label{
+    background-position:0 -90px;}
+input[type=checkbox]:checked + label {
+    background-position:0 -90px;}
+
+	
