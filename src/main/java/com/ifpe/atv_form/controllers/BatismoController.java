@@ -17,12 +17,12 @@ public class BatismoController {
 	@Autowired
 	private BatismoService batismoService;
 
-	@GetMapping("/")
+	@GetMapping("/batismo")
 	public String batismoPage() {
 		return "batismo";
 	}
 
-	@GetMapping("/batismos")
+	@GetMapping("/")
 	public String listaDeBatismo(Model model) {
 		List<BatismoModel> listaBatismos = this.batismoService.listaBatismos();
 		model.addAttribute("batismos", listaBatismos);

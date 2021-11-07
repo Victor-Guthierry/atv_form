@@ -1,9 +1,11 @@
-body{
-    background: rgb(231,206,246);
-    background: radial-gradient(circle, rgba(231,206,246,1) 22%, rgba(255,243,246,1) 90%);
-}
-.container{
+.form_batismo{
     background: antiquewhite;
+    border-style: solid; 
+    margin: 50px auto; 
+    width: 900px;
+}
+.mt-50 {
+	margin-top: 50px;
 }
 .link{
 	text-decoration: none;
@@ -57,4 +59,7 @@ input[type=radio]:checked + label{
 input[type=checkbox]:checked + label {
     background-position:0 -90px;}
 
-	
+.center-div {
+	margin: 0 auto;
+	width: 20%;
+}
